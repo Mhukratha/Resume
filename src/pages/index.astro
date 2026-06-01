@@ -1,11 +1,102 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <div class="container">
+    <h1>YOSSAWIN<br>KASIPHONGPHAISAN</h1>
+    <p class="sub">เลือก Resume ที่ต้องการ</p>
+
+    <div class="buttons">
+      <a href="/dev" class="btn btn-dev">
+        <span class="btn-label">WEB DEVELOPER</span>
+        <span class="btn-sub">System Integration & AI</span>
+      </a>
+      <a href="/staf" class="btn btn-staf">
+        <span class="btn-label">EVENT STAFF</span>
+        <span class="btn-sub">Operation & Support</span>
+      </a>
+    </div>
+  </div>
 </Layout>
+
+<style>
+  :global(body) {
+    margin: 0;
+    background: #111111;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+  }
+
+  .sub {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #c9a84c;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+  .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 120px;
+    border: 1px solid #2a2a2a;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+    background: #161616;
+  }
+
+  .btn-dev:hover {
+    border-color: #c9a84c;
+    background: #1a1a14;
+  }
+
+  .btn-staf:hover {
+    border-color: rgba(255,255,255,0.3);
+    background: #1a1a1a;
+  }
+
+  .btn-label {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #ffffff;
+  }
+
+  .btn-dev .btn-label { color: #c9a84c; }
+
+  .btn-sub {
+    font-size: 10px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 1px;
+    margin-top: 6px;
+    text-align: center;
+    padding: 0 12px;
+  }
+</style>

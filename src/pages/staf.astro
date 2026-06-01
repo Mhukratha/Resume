@@ -1,0 +1,253 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Resume – Yossawin Kasiphongphaisan">
+  <!-- นำเข้า Google Fonts ให้แสดงผลฟอนต์ Sarabun และ Playfair Display อย่างถูกต้อง -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <div class="resume-container">
+    <div class="card">
+      <!-- ─── Header ─── -->
+      <div class="header">
+        <div class="header-text">
+          <h1 class="name-en">Yossawin </h1>
+          <h1 class="name-en">Kasiphongphaisan</h1>
+          <div class="name-th">ยศวิน กสิพงศ์ไพศาล</div>
+          <span class="position-badge">Por ( ป้อ )</span>
+        </div>
+      </div>
+
+      <!-- ─── Body ─── -->
+      <div class="body">
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <div class="sidebar-section">
+            <div class="sidebar-title">ติดต่อ</div>
+            <p>📞 083-052-5476</p>
+            <a href="mailto:mhukratha@gmail.com">✉️ mhukratha@gmail.com</a>
+            <p>💬 Line: poh2003</p>
+          </div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-title">ข้อมูลส่วนตัว</div>
+            <div class="stat-grid">
+              <div class="stat-box"><span class="stat-num">22</span><span class="stat-label">อายุ</span></div>
+              <div class="stat-box"><span class="stat-num">167</span><span class="stat-label">ส่วนสูง</span></div>
+              <div class="stat-box" style="grid-column: span 2;"><span class="stat-num">67</span><span class="stat-label">น้ำหนัก (kg)</span></div>
+            </div>
+          </div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-title">Languages</div>
+            <div class="lang-row"><span>Thai</span><span class="lang-level">Native</span></div>
+            <div class="lang-row"><span>English</span><span class="lang-level">Conversational</span></div>
+          </div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-title">Professional Tags</div>
+            <div class="pro-tag-wrap">
+              <span class="pro-tag">Team Collaboration</span>
+              <span class="pro-tag">Agile Methodologies</span>
+              <span class="pro-tag">Fast Learner</span>
+              <span class="pro-tag">Adaptability</span>
+              <span class="pro-tag">Problem Solving</span>
+              <span class="pro-tag">Work Under Pressure</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main">
+          <!-- EXPERIENCE SECTION -->
+          <div class="section">
+            <div class="section-title">ประสบการณ์ทำงาน</div>
+            <div class="exp-item">
+              <div class="exp-role">Event Operation Staff / Site Setup</div>
+              <div class="exp-place">งานกีฬาสี ธกศ. สัตหีบ</div>
+              <ul class="exp-desc">
+                <li>บริหารจัดการพื้นที่ วางผังที่นั่ง และติดตั้งอุปกรณ์อำนวยความสะดวก</li>
+                <li>ดูแลความเรียบร้อยและประสานงานภายในพื้นที่จัดกิจกรรม</li>
+                <li>ควบคุมการรื้อถอนและจัดการพื้นที่ให้กลับสู่สภาพเดิมอย่างรวดเร็ว</li>
+              </ul>
+            </div>
+
+            <div class="exp-item">
+              <div class="exp-role">Backbar Support</div>
+              <div class="exp-place">Backbar S2O 2026</div>
+              <ul class="exp-desc">
+                <li>บริหารจัดการสต็อกเครื่องดื่มและอุปกรณ์สนับสนุนหลังบาร์</li>
+                <li>ประสานงานร่วมกับทีมหน้าบาร์เพื่อความรวดเร็วในการบริการ</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- EDUCATION SECTION -->
+          <div class="section">
+            <div class="section-title">การศึกษา</div>
+            <div class="edu-item">
+              <div class="edu-degree">Bachelor of Science in Games and Interactive Media</div>
+              <div class="edu-school">Bangkok University</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── Footer ─── -->
+      <div class="footer">
+        <span>OFFICIAL RESUME</span>
+        <span class="gold">Yossawin Kasiphongphaisan · 083-052-5476</span>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  /* จัดหน้าเว็บให้อยู่ตรงกลางและเปลี่ยนพื้นหลังซัพพอร์ตสไตล์เดิม */
+  .resume-container {
+    font-family: 'Sarabun', sans-serif;
+    background: #888;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 30px 20px;
+  }
+
+  .card {
+    background: #fff;
+    width: 700px;
+    height: 1000px;
+    flex-shrink: 0;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.35);
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ─── Header ─── */
+  .header {
+    background: #111;
+    color: #fff;
+    padding: 40px 40px 70px 40px; 
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-shrink: 0;
+  }
+  .header::after {
+    content: '';
+    height: 4px;
+    background: linear-gradient(90deg, #c9a84c, #e8c97a, #c9a84c);
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+  }
+  .header-text { flex: 1; }
+  .name-en {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  .name-th {
+    font-size: 14px;
+    color: #c9a84c;
+    margin-top: 4px;
+    letter-spacing: 1.5px;
+  }
+  .position-badge {
+    display: inline-block;
+    background: #c9a84c;
+    color: #111;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-top: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* ─── Body ─── */
+  .body {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    background: #1a1a1a;
+    color: #ddd;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .sidebar-title {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #c9a84c;
+    border-bottom: 1px solid #333;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  .sidebar p, .sidebar a { font-size: 12px; line-height: 2; color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+  
+  .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .stat-box { background: #252525; border-radius: 6px; padding: 10px 5px; text-align: center; }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 18px; color: #c9a84c; }
+  .stat-label { font-size: 9px; color: #888; text-transform: uppercase; }
+
+  .lang-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+  .lang-level { font-size: 10px; color: #c9a84c; background: #252525; padding: 2px 10px; border-radius: 12px; }
+
+  .pro-tag-wrap { display: flex; flex-wrap: wrap; gap: 6px; }
+  .pro-tag { background: #252525; border: 1px solid #333; border-radius: 4px; font-size: 10px; color: #bbb; padding: 4px 10px; }
+
+  /* Main Content */
+  .main {
+    padding: 35px 40px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .section-title {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #c9a84c;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  .exp-item, .edu-item { margin-bottom: 20px; }
+  .exp-role, .edu-degree { font-size: 15px; font-weight: 600; color: #111; line-height: 1.4; }
+  .exp-place, .edu-school { font-size: 12px; color: #c9a84c; font-weight: 400; margin: 4px 0 8px 0; }
+  .exp-desc { font-size: 12.5px; color: #444; line-height: 1.8; padding-left: 18px; }
+
+  /* ─── Footer ─── */
+  .footer {
+    background: #111;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #222;
+  }
+  .footer span { font-size: 11px; color: #666; }
+  .footer .gold { color: #c9a84c; font-weight: 600; }
+
+  @media print {
+    .resume-container { padding: 0; background: #fff; }
+    .card { width: 210mm; height: 297mm; box-shadow: none; }
+  }
+</style>
