@@ -34,6 +34,8 @@ import Layout from '../layouts/Layout.astro';
     align-items: center;
     justify-content: center;
     gap: 16px;
+    padding: 24px;
+    box-sizing: border-box;
   }
 
   h1 {
@@ -52,11 +54,16 @@ import Layout from '../layouts/Layout.astro';
     color: #c9a84c;
     text-transform: uppercase;
     margin-bottom: 16px;
+    text-align: center;
   }
 
   .buttons {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 440px;
   }
 
   .btn {
@@ -98,5 +105,28 @@ import Layout from '../layouts/Layout.astro';
     margin-top: 6px;
     text-align: center;
     padding: 0 12px;
+  }
+
+  /* ─────────────  RESPONSIVE  ───────────── */
+
+  /* Tablet */
+  @media (max-width: 768px) {
+    h1 { font-size: 32px; }
+  }
+
+  /* Mobile: stack the two buttons and let them fill the width */
+  @media (max-width: 480px) {
+    h1 { font-size: 26px; }
+    .sub { font-size: 11px; letter-spacing: 2px; }
+
+    .buttons {
+      flex-direction: column;
+      align-items: stretch;
+      max-width: 280px;
+    }
+    .btn {
+      width: 100%;
+      height: 100px;
+    }
   }
 </style>

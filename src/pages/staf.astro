@@ -18,7 +18,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="header-image">
-          <img src="/src/assets/IMG_3677.jpg" alt="Yossawin Kasiphongphaisan" />
+          <img src="IMG_3677.jpg" alt="Yossawin Kasiphongphaisan" />
         </div>
       </div>
 
@@ -180,6 +180,7 @@ import Layout from '../layouts/Layout.astro';
     height: 150px;
     object-fit: cover;
     border: 1px solid #c9a84c;
+    flex-shrink: 0;
   }
   .header::after {
     content: '';
@@ -188,7 +189,7 @@ import Layout from '../layouts/Layout.astro';
     position: absolute;
     bottom: 0; left: 0; right: 0;
   }
-  .header-text { flex: 1; }
+  .header-text { flex: 1; min-width: 0; }
   .name-en {
     font-family: 'Playfair Display', serif;
     font-size: 28px;
@@ -285,12 +286,83 @@ import Layout from '../layouts/Layout.astro';
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid #222;
+    flex-wrap: wrap;
+    gap: 4px;
   }
   .footer span { font-size: 11px; color: #666; }
   .footer .gold { color: #c9a84c; font-weight: 600; }
 
+  /* ─────────────  RESPONSIVE  ───────────── */
+
+  /* Tablet: shrink card so it still looks like the A4 layout, just smaller */
+  @media (max-width: 900px) {
+    .resume-container { padding: 20px 16px; min-height: auto; }
+    .card {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+    }
+    .body { grid-template-columns: 200px 1fr; }
+    .main { padding: 28px 30px; }
+    .sidebar { padding: 26px 20px; }
+  }
+
+  /* Small tablet: stack sidebar on top of main */
+  @media (max-width: 640px) {
+    .header {
+      padding: 30px 24px;
+      flex-wrap: wrap;
+    }
+    .header-image img { width: 96px; height: 118px; }
+    .name-en { font-size: 22px; }
+
+    .body { grid-template-columns: 1fr; }
+    .sidebar {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .sidebar-section { flex: 1 1 220px; }
+    .main { padding: 24px; gap: 22px; }
+  }
+
+  /* Mobile */
+  @media (max-width: 480px) {
+    .resume-container { padding: 12px 8px; }
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 24px 18px;
+    }
+    .header-image img { width: 84px; height: 104px; }
+    .name-en { font-size: 19px; }
+    .name-th { font-size: 12px; }
+    .position-badge { font-size: 10px; padding: 3px 10px; }
+
+    .sidebar {
+      flex-direction: column;
+      padding: 20px 18px;
+      gap: 20px;
+    }
+    .stat-grid { gap: 8px; }
+
+    .main { padding: 20px 18px; gap: 18px; }
+    .exp-role, .edu-degree { font-size: 13.5px; }
+    .exp-desc { font-size: 12px; padding-left: 14px; }
+
+    .footer {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 12px 18px;
+      gap: 4px;
+    }
+  }
+
   @media print {
-    .resume-container { padding: 0; background: #fff; }
+    .resume-container { padding: 0; background: #fff; min-height: auto; }
     .card { width: 210mm; height: 297mm; box-shadow: none; }
+    .body { grid-template-columns: 240px 1fr; }
+    .sidebar { flex-direction: column; }
   }
 </style>
