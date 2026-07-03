@@ -3,7 +3,6 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Yossawin Kasiphongphaisan — Web Developer">
-  <!-- นำเข้า Google Fonts ให้กับ Layout นี้อย่างถูกต้อง -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 
   <div class="dev-resume-body">
@@ -15,7 +14,7 @@ import Layout from '../layouts/Layout.astro';
           <div class="role">Web Application Developer &amp; System Integration</div>
           <div class="location">Bangkok, Thailand</div>
         </div>
-        <img src="" alt="Yossawin Kasiphongphaisan" class="profile-photo" />
+        <img src="/src/assets/IMG_3677.jpg" alt="Yossawin Kasisphongphaisan" class="profile-photo" />
       </div>
 
       <div class="body">
@@ -37,7 +36,6 @@ import Layout from '../layouts/Layout.astro';
               <div class="skill-tags">
                 <span class="skill-tag white-accent">JavaScript</span>
                 <span class="skill-tag white-accent">C#</span>
-                <span class="skill-tag">Python</span>
                 <span class="skill-tag">HTML5</span>
                 <span class="skill-tag">CSS3</span>
               </div>
@@ -211,7 +209,7 @@ import Layout from '../layouts/Layout.astro';
   .header::after {
     content: '';
     position: absolute;
-    bottom: -1px; left: 48px;
+    bottom: -1px; left: 70px;
     width: 80px; height: 2px;
     background: #c9a84c;
   }
@@ -238,13 +236,13 @@ import Layout from '../layouts/Layout.astro';
     letter-spacing: 1px;
   }
   .profile-photo {
-    width: 110px;
-    height: 130px;
+    width: 140px;
+    height: 170px;
     object-fit: cover;
     object-position: center top;
     border: 2px solid #333;
     outline: 1px solid rgba(255,255,255,0.08);
-    filter: grayscale(15%) contrast(1.1);
+    filter: grayscale(20%) contrast(1.2);
   }
 
   .body {
